@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ANPR Dashboard</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="hero small-hero">
+    <div class="badge">Live statistics</div>
+    <h1>Dashboard</h1>
+    <p>Everything the system has detected so far.</p>
+    <div class="row" style="justify-content:center">
+      <a class="btn ghost" href="/">&larr; Back to scanner</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="stats" id="stats"></section>
+
+    <section class="two">
+      <div class="card">
+        <h2>Detections per day</h2>
+        <p class="muted">Last 7 days</p>
+        <div id="bars" class="bars"></div>
+      </div>
+      <div class="card">
+        <h2>Registered vs unknown</h2>
+        <div class="donut-wrap">
+          <svg id="donut" class="donut" viewBox="0 0 42 42"></svg>
+          <div id="legend" class="legend"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="two">
+      <div class="card">
+        <h2>Most frequent vehicles</h2>
+        <div id="top"></div>
+      </div>
+      <div class="card">
+        <h2>Needs attention</h2>
+        <div id="alerts"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>Updates automatically every 10 seconds</footer>
+  <script src="/static/dashboard.js"></script>
+</body>
+</html>
